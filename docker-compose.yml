@@ -3,6 +3,10 @@ services:
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    # env_file:
+    # - .env
+    environment:
+      REDIS_URL: "redis://redis:6379"
     volumes:
       - .:/myapp
     ports:
@@ -17,8 +21,21 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: example
 
+  worker:
+    build: .
+    command: bundle exec karafka server
+    environment:
+      REDIS_URL: "redis://redis:6379"
+    volumes:
+      - .:/myapp
+    depends_on:
+      - db
+
   adminer:
     image: adminer
     restart: always
     ports:
       - 8080:8080
+
+  redis:
+    image: "redis:alpine"
