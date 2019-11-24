@@ -9,7 +9,8 @@ Based on:
 To deploy just:
 RUN ```docker-compose up -d```
 
-Then use any Api request tool to create:
+Then use any Api request tool to ```http://localhost:3000/```:
+
 - Application
 
   - get all ```get "applications/"``` 
@@ -26,5 +27,7 @@ Then use any Api request tool to create:
 - Messages
 
   - get all ```post "applications/:token/chats/:number/messages"```
-  - create new ```get "applications/:token/chats/:number/messages/"```
+  - create new ```get "applications/:token/chats/:number/messages/"``` 
+    * request takes body of one parameter ```{"body":"example"}```
+
 

@@ -24,7 +24,10 @@ class MessagesController < ApplicationController
   
     def set_chat
       application = Application.find_by(token: message_params[:token])
+      json_response({}, :not_found) if !application
       @chat = application.chats.find_by(number: message_params[:number])
+      json_response({}, :not_found) if !@chat
+
     end
 
     def get_message_next_number(chat_id)
