@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_23_165012) do
+ActiveRecord::Schema.define(version: 2019_11_24_223108) do
 
   create_table "applications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "token"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_11_23_165012) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "chats_count"
+    t.index ["token"], name: "index_applications_on_token"
   end
 
   create_table "chats", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -25,7 +26,9 @@ ActiveRecord::Schema.define(version: 2019_11_23_165012) do
     t.bigint "application_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "messages_count"
     t.index ["application_id"], name: "index_chats_on_application_id"
+    t.index ["number"], name: "index_chats_on_number"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -35,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_11_23_165012) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_id"], name: "index_messages_on_chat_id"
+    t.index ["number"], name: "index_messages_on_number"
   end
 
   add_foreign_key "chats", "applications"

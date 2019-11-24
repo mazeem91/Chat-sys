@@ -20,7 +20,7 @@ gem 'active_model_serializers', '0.9.3'
 gem "waterdrop", git: "https://github.com/karafka/waterdrop.git", branch: "master"
 gem "karafka", git: "https://github.com/karafka/karafka.git", branch: "master"
 gem 'activerecord-import'
-
+gem 'whenever', require: false
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
