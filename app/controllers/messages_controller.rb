@@ -16,6 +16,10 @@ class MessagesController < ApplicationController
       json_response(@message, :created)
     end
 
+    def search
+      json_response(Message.search(params[:query]))
+    end
+
     private
     def message_params
       params.permit(:token, :number, :body)

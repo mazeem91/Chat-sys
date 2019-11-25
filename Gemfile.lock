@@ -1,13 +1,13 @@
 GIT
   remote: git://github.com/elastic/elasticsearch-rails.git
-  revision: baea670d24b5c42ee994b880db9491b31da4598b
-  branch: master
+  revision: 7bbe7ec89e9a31380e4a8f0bff886559d80dc27c
+  branch: 6.x
   specs:
-    elasticsearch-model (7.0.0)
+    elasticsearch-model (6.1.0)
       activesupport (> 3)
       elasticsearch (> 1)
       hashie
-    elasticsearch-rails (7.0.0)
+    elasticsearch-rails (6.1.0)
 
 GIT
   remote: https://github.com/karafka/karafka.git

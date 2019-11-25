@@ -19,10 +19,10 @@ gem 'redis', '~> 4.0'
 gem 'active_model_serializers', '0.9.3'
 gem "waterdrop", git: "https://github.com/karafka/waterdrop.git", branch: "master"
 gem "karafka", git: "https://github.com/karafka/karafka.git", branch: "master"
-gem 'activerecord-import'
+gem 'activerecord-import', require: false
 gem 'whenever', require: false
-gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
-gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: '6.x'
+gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: '6.x'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

@@ -1,6 +1,6 @@
 config = {
-    host: "elastic",
-    port: 9300,
+    host: "elasticsearch",
+    port: 9200,
     transport_options: {
       request: { timeout: 5 }
     }
