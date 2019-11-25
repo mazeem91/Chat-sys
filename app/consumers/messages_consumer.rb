@@ -5,6 +5,6 @@ class MessagesConsumer < ApplicationConsumer
             puts message['payload']
             messages << Message.new(message['payload'])
         end
-        Message.import messages
+        Message.bulk_import messages
     end
 end

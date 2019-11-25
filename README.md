@@ -1,6 +1,6 @@
-# README
+# Application Chat System (Ruby)
 
-- Application Chat System
+- Application Chat System : my very first time writing ruby.
 
 Based on:
 

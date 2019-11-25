@@ -21,6 +21,9 @@ gem "waterdrop", git: "https://github.com/karafka/waterdrop.git", branch: "maste
 gem "karafka", git: "https://github.com/karafka/karafka.git", branch: "master"
 gem 'activerecord-import'
 gem 'whenever', require: false
+gem 'elasticsearch-model', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+gem 'elasticsearch-rails', git: 'git://github.com/elastic/elasticsearch-rails.git', branch: 'master'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

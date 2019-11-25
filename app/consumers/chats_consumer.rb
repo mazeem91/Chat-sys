@@ -5,6 +5,6 @@ class ChatsConsumer < ApplicationConsumer
             puts chat['payload']
             chats << Chat.new(chat['payload'])
         end
-        Chat.import chats
+        Chat.bulk_import chats
     end
 end
